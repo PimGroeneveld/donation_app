@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import MapContainer from './views/charity_map_view';
+import './public/css/App.css';
+import './public/css/index.css';
+import CharityMap from './components/map/CharityMap';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom';
+import NavBar from './components/nav/NavBar.js';
+import NavBarTop from './components/nav/NavBarTop';
+import NavBarBottom from './components/nav/NavBarBottom';
+import Footer from './components/nav/Footer';
+import logo from './logo.svg';
 
 
 class App extends Component {
@@ -15,31 +20,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
 
-          <Router>
-            <div class="topnav">
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-                <li>
-                  <Link to="/map">Near me</Link>
-                </li>
-              </ul>
-              <hr />
-              <Route exact path="/map" component={MapContainer} />
-
-              <a
-                onClick={() => {
-                  window.location.href = 'charity_map_view.js';
-                }}
-              >
-                Go to maps
-              </a>
-            </div>
-          </Router>
+          <NavBar />
 
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -56,6 +37,7 @@ class App extends Component {
         </header>
       </div>
     );
+  
   }
 }
 
