@@ -36,7 +36,6 @@ class NavBar extends Component {
             </Router>
         )
 
-
     }
 }
 

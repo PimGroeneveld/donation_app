@@ -1,16 +1,7 @@
 import React, { Component } from 'react';
 import './public/css/App.css';
 import './public/css/index.css';
-import CharityMap from './components/map/CharityMap';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
 import NavBar from './components/nav/NavBar.js';
-import NavBarTop from './components/nav/NavBarTop';
-import NavBarBottom from './components/nav/NavBarBottom';
-import Footer from './components/nav/Footer';
 import logo from './logo.svg';
 
 
