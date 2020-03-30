@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './public/css/App.css';
-import './public/css/index.css';
+import './css/App.css';
+import './css/index.css';
 import NavBar from './components/nav/NavBar.js';
 import logo from './logo.svg';
 

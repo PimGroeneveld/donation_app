@@ -4,7 +4,7 @@ import {
     Route,
     Link
   } from 'react-router-dom';
-import { CharityMap } from '../map/CharityMap';
+import { MapContainer } from '../map/MapContainer.js';
 
 class NavBar extends Component {
     constructor(props) {
@@ -21,7 +21,7 @@ class NavBar extends Component {
     render() {
         return (
             <Router>
-                <Route path='/map'component={CharityMap} />
+                <Route path='/map'component={MapContainer} />
             <header>
                 <ul>
                     <li>
