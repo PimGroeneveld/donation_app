@@ -4,7 +4,8 @@ import {
     Route,
     Link
   } from 'react-router-dom';
-import { MapContainer } from '../map/MapContainer.js';
+import MapContainer from '../map/MapContainer.js';
+import InfoContainer from '../../containers/InfoContainer.js';
 
 class NavBar extends Component {
     constructor(props) {
@@ -21,7 +22,8 @@ class NavBar extends Component {
     render() {
         return (
             <Router>
-                <Route path='/map'component={MapContainer} />
+                <Route path='/map' component={MapContainer} />
+                <Route path='/info' component={InfoContainer} />
             <header>
                 <ul>
                     <li>
@@ -30,12 +32,14 @@ class NavBar extends Component {
                     <li>
                         <Link className="categories-navbar" to={"/map"} >Show map</Link>
                     </li>
+                    <li>
+                        <Link className="categories-navbar" to={"/info"} >Types of donations</Link>
+                    </li>
                 </ul>
                 <button className= "nightmode-button" data-switch-contrast aria-hidden onClick = {this.handleNightmode}>Night mode</button>
             </header>
             </Router>
         )
-
     }
 }
 
